@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="px-4 py-5 my-5 text-center">
+    <div class="mb-4">
+        <span class="bg-primary bg-opacity-10 text-primary p-4 rounded-circle d-inline-block">
+            <i class="fas fa-layer-group fa-4x"></i>
+        </span>
+    </div>
+    <h1 class="display-5 fw-bold text-dark">Manage Users With Ease</h1>
+    <div class="col-lg-6 mx-auto">
+        <p class="lead mb-4 text-muted">
+            MyPlatform is the ultimate solution for enterprise administration. 
+            Securely manage your team, track registrations, and scale your database effortlessly.
+        </p>
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+            <a href="{% url 'users' %}" class="btn btn-primary btn-lg px-5 gap-3 fw-bold shadow-sm">
+                Get Started <i class="fas fa-arrow-right ms-2"></i>
+            </a>
+            <a href="{% url 'register' %}" class="btn btn-outline-secondary btn-lg px-4 fw-bold">
+              Register New
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="container px-4 py-5" id="featured-3">
+    <h2 class="pb-2 border-bottom text-center mb-5 text-muted small text-uppercase fw-bold ls-wider">Why Choose Us</h2>
+    <div class="row g-4 py-3 row-cols-1 row-cols-lg-3">
+        <div class="feature col text-center">
+            <div class="feature-icon bg-gradient bg-primary text-white rounded-3 mb-3 d-inline-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+                <i class="fas fa-shield-alt fa-lg"></i>
+            </div>
+            <h3 class="fs-4 fw-bold">Secure Database</h3>
+            <p class="text-muted">Enterprise-grade security ensuring your user data is protected against SQL injections and breaches.</p>
+        </div>
+        <div class="feature col text-center">
+            <div class="feature-icon bg-gradient bg-success text-white rounded-3 mb-3 d-inline-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+                <i class="fas fa-bolt fa-lg"></i>
+            </div>
+            <h3 class="fs-4 fw-bold">Fast Performance</h3>
+            <p class="text-muted">Optimized with Django's powerful ORM to handle thousands of requests with minimal latency.</p>
+        </div>
+        <div class="feature col text-center">
+            <div class="feature-icon bg-gradient bg-info text-white rounded-3 mb-3 d-inline-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+                <i class="fas fa-magic fa-lg"></i>
+            </div>
+            <h3 class="fs-4 fw-bold">Modern UI</h3>
+            <p class="text-muted">Built with Bootstrap 5 for a responsive, mobile-first experience that looks great on any device.</p>
+        </div>
+    </div>
+</div>
+
+<style>
+    .ls-wider {
+        letter-spacing: 4px;
+    }
+</style>
+{% endblock %}
