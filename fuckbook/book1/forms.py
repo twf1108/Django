@@ -1,5 +1,3 @@
-from django import forms
-from django.core import validators
 from .models import User
 from django.contrib.auth.forms import UserCreationForm, UserChangeForm
 

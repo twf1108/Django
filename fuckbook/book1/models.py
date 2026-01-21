@@ -1,5 +1,4 @@
 from django.db import models
-# 1. 引入 PermissionsMixin
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, PermissionsMixin
 
 class UserManager(BaseUserManager):
@@ -17,7 +16,6 @@ class UserManager(BaseUserManager):
         extra_fields.setdefault('is_superuser', True)
         return self.create_user(email, password, **extra_fields)
 
-# 2. 在这里添加 PermissionsMixin 继承
 class User(AbstractBaseUser, PermissionsMixin):
     first_name = models.CharField(max_length=30)
     last_name = models.CharField(max_length=30)
